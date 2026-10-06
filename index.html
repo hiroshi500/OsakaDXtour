@@ -1,132 +1,217 @@
-<!DOCTYPE html><html lang="ja"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>近畿インフラDX大阪研修旅行</title>
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title>近畿インフラDX大阪研修旅行｜白山野々市建設業協会青年委員会</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+
+<!-- Google Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;600;700;900&display=swap" rel="stylesheet">
+
 <style>
-body{margin:0;font-family:'Noto Sans JP',sans-serif;background:#f4f6f8;color:#2b2b2b;line-height:1.6}
-.hero{padding:24px 16px;background:linear-gradient(135deg,rgba(0,0,0,.7),rgba(0,0,0,.4)),url("image_403007.jpg") center/cover no-repeat;color:#fff;text-align:center}
-.hero-badge{display:inline-block;background:#ffcc00;color:#222;font-weight:700;font-size:.75rem;padding:3px 12px;border-radius:50px;margin-bottom:6px}
-.hero-title{font-size:1.5rem;font-weight:900;margin:0 0 8px;text-shadow:0 2px 8px rgba(0,0,0,.6)}
-.hero-meta{display:flex;justify-content:center;gap:6px;flex-wrap:wrap;margin-bottom:12px}
-.hero-meta-item{background:rgba(255,255,255,.2);padding:3px 10px;border-radius:6px;font-size:.78rem;font-weight:600}
-.hero-btn{display:inline-block;padding:8px 24px;border-radius:50px;background:#ffcc00;color:#222;text-decoration:none;font-weight:700;font-size:.85rem}
-.container{max-width:800px;margin:0 auto;padding:0 12px 40px}
-.section{background:#fff;margin-top:16px;padding:20px 16px;border-radius:16px;box-shadow:0 4px 16px rgba(0,0,0,.06)}
-.section-header{display:flex;align-items:center;gap:10px;border-bottom:2px solid #eee;padding-bottom:8px;margin-bottom:16px}
-.section-tag{background:#ff6600;color:#fff;font-weight:800;font-size:.8rem;padding:3px 10px;border-radius:6px}
-.section-title{font-size:1.25rem;font-weight:800;margin:0}
-.highlights-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
-.highlight-card{position:relative;height:110px;border-radius:12px;overflow:hidden;display:flex;flex-direction:column;justify-content:flex-end;padding:10px;color:#fff;text-decoration:none;background-size:cover;background-position:center}
-.highlight-card:before{content:"";position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,.85),rgba(0,0,0,.2))}
-.highlight-content{position:relative;z-index:1}
-.highlight-icon{font-size:1.1rem}
-.highlight-title{font-weight:700;font-size:.82rem;text-shadow:0 1px 3px rgba(0,0,0,.8)}
-.timeline{position:relative;padding-left:20px}
-.timeline:before{content:"";position:absolute;left:6px;top:6px;bottom:6px;width:3px;background:#ff6600}
-.timeline-item{position:relative;margin-bottom:20px;display:flex;gap:10px}
-.timeline-dot{position:absolute;left:-20px;top:6px;width:11px;height:11px;border-radius:50%;background:#fff;border:3px solid #ff6600}
-.timeline-body{flex:1}
-.timeline-time{font-weight:800;font-size:.92rem;color:#ff6600}
-.timeline-spot{font-size:1.05rem;font-weight:700}
-.timeline-photo-link{width:100px;height:75px;border-radius:8px;overflow:hidden;flex-shrink:0;background:#eee}
-.timeline-thumb{width:100%;height:100%;object-fit:cover}
-.hp-badge{position:absolute;bottom:2px;right:2px;background:rgba(0,0,0,.75);color:#fff;font-size:.58rem;padding:1px 4px;border-radius:3px}
-.map-link{text-decoration:none;color:#111;border-bottom:1.5px solid #ffcc00}
-.timeline-desc{font-size:.85rem;color:#666;margin-top:2px}
-@media(max-width:480px){
-.hero-title{font-size:1.25rem}
-.highlights-grid{grid-template-columns:1fr}
-.highlight-card{height:90px}
-.timeline-photo-link{width:100%;height:140px;margin-top:6px}
-.timeline-item{flex-direction:column}
-}
-</style></head><body>
+  :root {
+    --primary-day1: #ff6600;
+    --primary-day1-light: #fff5ee;
+    --primary-day2: #0066cc;
+    --primary-day2-light: #f0f7ff;
+    --accent-yellow: #ffcc00;
+    --text-color: #2b2b2b;
+    --bg-color: #f4f6f8;
+    --card-shadow: 0 4px 16px rgba(0,0,0,0.06);
+  }
 
-<section class="hero"><span class="hero-badge">白山野々市建設業協会青年委員会</span>
-<h1 class="hero-title">近畿インフラDX 大阪研修旅行</h1>
-<div class="hero-meta"><span class="hero-meta-item">📅 2026年10月8日〜9日</span><span class="hero-meta-item">🚌 1泊2日</span></div>
-<a href="#schedule" class="hero-btn">行程を見る</a></section>
+  * {
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
+  }
 
-<div class="container" id="schedule">
+  body {
+    margin: 0;
+    font-family: 'Noto Sans JP', sans-serif;
+    background: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+    padding-bottom: 20px;
+  }
 
-<section class="section">
-<div class="section-header"><span class="section-tag">ABOUT</span><h2 class="section-title">旅の目的 & ハイライト</h2></div>
-<p style="margin:0 0 12px;font-size:.88rem">インフラDXの現場を学びつつ、大阪・京都の観光とグルメで親睦を深めます。</p>
+  /* ----------------------------------
+     固定ナビゲーション（モバイル操作性UP）
+  ---------------------------------- */
+  .sticky-nav {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(8px);
+    display: flex;
+    justify-content: space-around;
+    padding: 8px 12px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+    border-bottom: 1px solid #eee;
+  }
+  .nav-item {
+    text-decoration: none;
+    color: #555;
+    font-size: 0.8rem;
+    font-weight: 700;
+    padding: 6px 14px;
+    border-radius: 20px;
+    transition: all 0.2s;
+  }
+  .nav-item.day1-btn { background: var(--primary-day1-light); color: var(--primary-day1); }
+  .nav-item.day2-btn { background: var(--primary-day2-light); color: var(--primary-day2); }
 
-<div class="highlights-grid">
-<a class="highlight-card" href="#" style="background-image:url('image_403c23.png')"><div class="highlight-content"><div class="highlight-icon">🏗️</div><div class="highlight-title">近畿インフラDX推進センター</div></div></a>
-<a class="highlight-card" href="#" style="background-image:url('image_403007.jpg')"><div class="highlight-content"><div class="highlight-icon">🏯</div><div class="highlight-title">大阪城 & カップヌードル館</div></div></a>
-<a class="highlight-card" href="#" style="background-image:url('image_40925b.jpg')"><div class="highlight-content"><div class="highlight-icon">⛩️</div><div class="highlight-title">伏見稲荷大社</div></div></a>
-</div>
-</section>
+  /* ----------------------------------
+     表紙（ヒーロー）
+  ---------------------------------- */
+  .hero {
+    position: relative;
+    padding: 32px 16px 28px;
+    background: linear-gradient(135deg, rgba(0,0,0,0.75) 0%, rgba(0,0,0,0.45) 100%), url("https://upload.wikimedia.org/wikipedia/commons/thumb/6/68/Osaka_Castle_02bs3200.jpg/1200px-Osaka_Castle_02bs3200.jpg") center/cover no-repeat #444;
+    color: white;
+    text-align: center;
+  }
+  .hero-badge {
+    display: inline-block;
+    background: var(--accent-yellow);
+    color: #222;
+    font-weight: 700;
+    font-size: 0.78rem;
+    padding: 4px 14px;
+    border-radius: 50px;
+    margin-bottom: 8px;
+  }
+  .hero-title {
+    font-size: 1.6rem;
+    font-weight: 900;
+    line-height: 1.35;
+    margin: 0 0 12px;
+    text-shadow: 0 2px 8px rgba(0,0,0,0.6);
+  }
+  .hero-meta {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    flex-wrap: wrap;
+    margin-bottom: 16px;
+  }
+  .hero-meta-item {
+    background: rgba(255, 255, 255, 0.25);
+    backdrop-filter: blur(6px);
+    padding: 5px 12px;
+    border-radius: 8px;
+    font-size: 0.82rem;
+    font-weight: 600;
+    border: 1px solid rgba(255,255,255,0.3);
+  }
 
-<section class="section">
-<div class="section-header"><span class="section-tag">DAY1</span><h2 class="section-title">10月8日（木）大阪観光</h2></div>
+  .container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 12px;
+  }
 
-<div class="timeline">
+  .section {
+    background: white;
+    margin-top: 16px;
+    padding: 20px 16px;
+    border-radius: 16px;
+    box-shadow: var(--card-shadow);
+    scroll-margin-top: 50px;
+  }
+  .section-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border-bottom: 2px solid #f0f0f0;
+    padding-bottom: 10px;
+    margin-bottom: 16px;
+  }
+  .section-tag {
+    background: var(--primary-day1);
+    color: white;
+    font-weight: 800;
+    font-size: 0.8rem;
+    padding: 4px 10px;
+    border-radius: 6px;
+  }
+  .section-title {
+    font-size: 1.2rem;
+    font-weight: 800;
+    margin: 0;
+    color: #111;
+  }
 
-<div class="timeline-item"><div class="timeline-dot"></div><div class="timeline-body">
-<div class="timeline-time">12:00–13:15</div><div class="timeline-spot">昼食：千房 阪急服部店</div>
-<div class="timeline-desc">本場のお好み焼きを堪能。</div></div>
-<a class="timeline-photo-link"><img src="image_40255f.jpg" class="timeline-thumb"><span class="hp-badge">HP</span></a></div>
+  /* ----------------------------------
+     ハイライト（見どころ）
+  ---------------------------------- */
+  .highlights-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px;
+    margin-top: 12px;
+  }
+  .highlight-card {
+    position: relative;
+    height: 100px;
+    border-radius: 12px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 8px;
+    text-decoration: none;
+    color: white;
+    background-size: cover;
+    background-position: center;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+  }
+  .highlight-card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0.15) 70%);
+  }
+  .highlight-content {
+    position: relative;
+    z-index: 1;
+  }
+  .highlight-title {
+    font-weight: 700;
+    font-size: 0.78rem;
+    line-height: 1.25;
+  }
 
-<div class="timeline-item"><div class="timeline-dot"></div><div class="timeline-body">
-<div class="timeline-time">13:45–15:15</div><div class="timeline-spot">カップヌードルミュージアム</div>
-<div class="timeline-desc">マイカップヌードル作り体験。</div></div>
-<a class="timeline-photo-link"><img src="image_40a13d.png" class="timeline-thumb"><span class="hp-badge">HP</span></a></div>
+  .card-dx { background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/3/3d/Komatsu_PC200-8.jpg/800px-Komatsu_PC200-8.jpg"); }
+  .card-castle { background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/6/68/Osaka_Castle_02bs3200.jpg/1200px-Osaka_Castle_02bs3200.jpg"); }
+  .card-fushimi { background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/b/b5/Fushimi_Inari_Taisha_Senbon_Torii_2016.jpg/800px-Fushimi_Inari_Taisha_Senbon_Torii_2016.jpg"); }
 
-<div class="timeline-item"><div class="timeline-dot"></div><div class="timeline-body">
-<div class="timeline-time">15:50–17:20</div><div class="timeline-spot">大阪城 天守閣</div>
-<div class="timeline-desc">大阪の象徴を見学。</div></div>
-<a class="timeline-photo-link"><img src="image_403007.jpg" class="timeline-thumb"><span class="hp-badge">HP</span></a></div>
+  .day2 .section-tag { background: var(--primary-day2); }
 
-<div class="timeline-item"><div class="timeline-dot"></div><div class="timeline-body">
-<div class="timeline-time">17:30頃</div><div class="timeline-spot">ハートンホテル西梅田</div>
-<div class="timeline-desc">チェックイン。</div></div>
-<a class="timeline-photo-link"><img src="image_4033c4.png" class="timeline-thumb"><span class="hp-badge">HP</span></a></div>
+  /* ----------------------------------
+     タイムライン（スマホ最適化）
+  ---------------------------------- */
+  .timeline {
+    position: relative;
+    padding-left: 20px;
+  }
+  .timeline::before {
+    content: "";
+    position: absolute;
+    left: 6px;
+    top: 8px;
+    bottom: 8px;
+    width: 3px;
+    background: #e2e8f0;
+    border-radius: 2px;
+  }
+  .day1 .timeline::before { background: var(--primary-day1); }
+  .day2 .timeline::before { background: var(--primary-day2); }
 
-<div class="timeline-item"><div class="timeline-dot"></div><div class="timeline-body">
-<div class="timeline-time">18:30–20:30</div><div class="timeline-spot">夕食：バルバッコア</div>
-<div class="timeline-desc">シュラスコ懇親会。</div></div>
-<a class="timeline-photo-link"><img src="image_403785.jpg" class="timeline-thumb"><span class="hp-badge">HP</span></a></div>
-
-</div></section>
-
-<section class="section">
-<div class="section-header"><span class="section-tag">DAY2</span><h2 class="section-title">10月9日（金）京都・研修</h2></div>
-
-<div class="timeline">
-
-<div class="timeline-item"><div class="timeline-dot"></div><div class="timeline-body">
-<div class="timeline-time">09:00–11:30</div><div class="timeline-spot">近畿インフラDX推進センター</div>
-<div class="timeline-desc">ICT建機・BIM/CIM体験。</div></div>
-<a class="timeline-photo-link"><img src="image_403c23.png" class="timeline-thumb"><span class="hp-badge">HP</span></a></div>
-
-<div class="timeline-item"><div class="timeline-dot"></div><div class="timeline-body">
-<div class="timeline-time">12:00–13:00</div><div class="timeline-spot">昼食：百足屋</div>
-<div class="timeline-desc">京都のおばんざい。</div></div>
-<a class="timeline-photo-link"><img src="image_408e58.png" class="timeline-thumb"><span class="hp-badge">HP</span></a></div>
-
-<div class="timeline-item"><div class="timeline-dot"></div><div class="timeline-body">
-<div class="timeline-time">13:20–14:40</div><div class="timeline-spot">伏見稲荷大社</div>
-<div class="timeline-desc">千本鳥居を散策。</div></div>
-<a class="timeline-photo-link"><img src="image_40925b.jpg" class="timeline-thumb"><span class="hp-badge">HP</span></a></div>
-
-<div class="timeline-item"><div class="timeline-dot"></div><div class="timeline-body">
-<div class="timeline-time">15:00–18:30</div><div class="timeline-spot">帰路</div>
-<div class="timeline-desc">2日間おつかれさまでした。</div></div></div>
-
-</div></section>
-
-<section class="section"><div class="section-header"><span class="section-tag">INFO</span><h2 class="section-title">持ち物</h2></div>
-<ul style="padding-left:18px;margin:0">
-<li>歩きやすい靴</li><li>雨具</li><li>身分証</li><li>必要な方は常備薬</li>
-</ul></section>
-
-<section class="section"><div class="section-header"><span class="section-tag">CONTACT</span><h2 class="section-title">緊急連絡</h2></div>
-<p style="margin:0;font-size:.9rem">青年委員会LINEグループへ。</p></section>
-
-</div>
-
-<footer style="text-align:center;padding:20px 0;font-size:.75rem;color:#777">© 2026 白山野々市建設業協会青年委員会</footer>
-
-</body></html>
-
+  .timeline-item {
+    position: relative;
+    margin-bottom: 22px;
+    display: flex;
+    justify-content: space-between;
