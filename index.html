@@ -57,21 +57,23 @@
     backdrop-filter: blur(8px);
     display: flex;
     justify-content: space-around;
-    padding: 8px 12px;
+    padding: 8px 6px;
     box-shadow: 0 2px 10px rgba(0,0,0,0.08);
     border-bottom: 1px solid #eee;
   }
   .nav-item {
     text-decoration: none;
     color: #555;
-    font-size: 0.8rem;
+    font-size: 0.78rem;
     font-weight: 700;
-    padding: 6px 14px;
+    padding: 6px 10px;
     border-radius: 20px;
     transition: all 0.2s;
+    white-space: nowrap;
   }
   .nav-item.day1-btn { background: var(--primary-day1-light); color: var(--primary-day1); }
   .nav-item.day2-btn { background: var(--primary-day2-light); color: var(--primary-day2); }
+  .nav-item.members-btn { background: #eef9f2; color: #107c41; }
 
   /* 表紙（ヒーロー） */
   .hero {
@@ -195,6 +197,7 @@
   .card-fushimi { background-image: url("fusimiinari.png"); }
 
   .day2 .section-tag { background: var(--primary-day2); }
+  .members .section-tag { background: #107c41; }
 
   /* タイムライン */
   .timeline {
@@ -310,6 +313,29 @@
     text-align: center;
   }
 
+  /* 参加者リスト用スタイル */
+  .member-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    width: 100%;
+    padding: 14px 20px;
+    background: #107c41;
+    color: white;
+    font-weight: 700;
+    font-size: 0.95rem;
+    text-decoration: none;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(16, 124, 65, 0.25);
+    transition: all 0.2s ease;
+    text-align: center;
+  }
+  .member-button:active {
+    transform: scale(0.98);
+    opacity: 0.9;
+  }
+
   /* 注意事項 */
   .info-card {
     background: #fffbe6;
@@ -360,6 +386,7 @@
 <nav class="sticky-nav">
   <a href="#day1" class="nav-item day1-btn">10/8 (木) Day 1</a>
   <a href="#day2" class="nav-item day2-btn">10/9 (金) Day 2</a>
+  <a href="#members" class="nav-item members-btn">👥 参加者</a>
   <a href="#notice" class="nav-item" style="background:#eee;">📌 お願い</a>
 </nav>
 
@@ -486,16 +513,10 @@
           </div>
           <div class="timeline-desc">マイカップヌードル作り体験（14:30〜）！</div>
         </div>
-        <div class="timeline-photo-group">
-          <a href="https://www.cupnoodles-museum.jp/ja/osaka_ikeda/" target="_blank" rel="noopener" class="timeline-photo-link" title="カップヌードルミュージアム 公式HP">
-            <img src="cupnoodles.png" alt="カップヌードルミュージアム" class="timeline-thumb">
-            <span class="hp-badge">公式HP ↗</span>
-          </a>
-          <a href="https://www.cupnoodles-museum.jp/ja/osaka_ikeda/" target="_blank" rel="noopener" class="timeline-photo-link" title="安藤百福記念館">
-            <img src="momofuku.png" alt="創業者 安藤百福" class="timeline-thumb">
-            <span class="hp-badge">公式HP ↗</span>
-          </a>
-        </div>
+        <a href="https://www.cupnoodles-museum.jp/ja/osaka_ikeda/" target="_blank" rel="noopener" class="timeline-photo-link" title="カップヌードルミュージアム 公式HP">
+          <img src="momofuku.png" alt="創業者 安藤百福" class="timeline-thumb">
+          <span class="hp-badge">公式HP ↗</span>
+        </a>
       </div>
 
       <div class="timeline-item">
@@ -671,6 +692,21 @@
     </div>
   </section>
 
+  <!-- MEMBERS / 参加者リスト -->
+  <section class="section members" id="members">
+    <div class="section-header">
+      <span class="section-tag">MEMBERS</span>
+      <h2 class="section-title">参加者名簿・部屋割り</h2>
+    </div>
+    <p style="margin: 0 0 14px; font-size: 0.88rem; color: #555;">
+      研修旅行の参加メンバーおよび部屋割り情報の一覧です。
+    </p>
+    <!-- 後から下記の href="#" にURLを入れていただくか、直接リンク先を挿入できます -->
+    <a href="#" target="_blank" rel="noopener" class="member-button" id="member-list-link">
+      📋 参加者リスト・部屋割りを開く ↗
+    </a>
+  </section>
+
   <!-- NOTICE / 注意事項 -->
   <section class="section" id="notice" style="padding:0; background:transparent; box-shadow:none;">
     <div class="info-card">
@@ -678,6 +714,7 @@
       <ul class="info-list">
         <li><strong>バスの発車に遅れないよう時間厳守でお願いします。</strong></li>
         <li><strong>バス内はシートベルト着用：</strong>移動中は安全第一で必ずシートベルトを着用してください。</li>
+        <li><strong>２日目飲酒禁止：</strong>飲酒運転をしないよう２日目の飲酒はご遠慮下さい。</li>
         <li><strong>貴重品の管理：</strong>お財布やスマホなど大事な物は各自で管理をお願いします。</li>
         <li><strong>スケジュールの変更あり：</strong>道路の混雑状況によって時間が多少前後する場合があります。</li>
       </ul>
