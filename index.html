@@ -2,8 +2,20 @@
 <html lang="ja">
 <head>
 <meta charset="UTF-8">
-<title>近畿インフラDX大阪研修旅行｜白山野々市建設業協会青年委員会</title>
-<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>近畿インフラDX大阪研修旅行 旅のしおり｜白山野々市建設業協会青年委員会</title>
+
+<!-- SEO / OGP (LINE・チャット共有用) -->
+<meta name="description" content="2026年10月8日(木)〜9日(金) 開催。白山野々市建設業協会青年委員会の近畿インフラDX大阪研修旅行・旅のしおりです。">
+<meta property="og:type" content="website">
+<meta property="og:title" content="近畿インフラDX大阪研修旅行 旅のしおり">
+<meta property="og:description" content="1泊2日の行程、見どころ、アクセス、マップ情報一覧">
+<meta property="og:image" content="https://www.kkr.mlit.go.jp/kingi/infradx-center/q291cd0000000bf7-img/kinki_DX.png">
+
+<!-- スマホ表示・テーマ設定 -->
+<meta name="theme-color" content="#ff6600">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 
 <!-- Google Fonts -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -33,12 +45,10 @@
     background: var(--bg-color);
     color: var(--text-color);
     line-height: 1.6;
-    padding-bottom: 20px;
+    padding-bottom: 30px;
   }
 
-  /* ----------------------------------
-     固定ナビゲーション（モバイル操作性UP）
-  ---------------------------------- */
+  /* 固定ナビゲーション */
   .sticky-nav {
     position: sticky;
     top: 0;
@@ -63,12 +73,10 @@
   .nav-item.day1-btn { background: var(--primary-day1-light); color: var(--primary-day1); }
   .nav-item.day2-btn { background: var(--primary-day2-light); color: var(--primary-day2); }
 
-  /* ----------------------------------
-     表紙（ヒーロー）
-  ---------------------------------- */
+  /* 表紙（ヒーロー） */
   .hero {
     position: relative;
-    padding: 32px 16px 28px;
+    padding: 36px 16px 28px;
     background: linear-gradient(135deg, rgba(0,0,0,0.75) 0%, rgba(0,0,0,0.45) 100%), url("https://upload.wikimedia.org/wikipedia/commons/thumb/6/68/Osaka_Castle_02bs3200.jpg/1200px-Osaka_Castle_02bs3200.jpg") center/cover no-repeat #444;
     color: white;
     text-align: center;
@@ -95,7 +103,6 @@
     justify-content: center;
     gap: 8px;
     flex-wrap: wrap;
-    margin-bottom: 16px;
   }
   .hero-meta-item {
     background: rgba(255, 255, 255, 0.25);
@@ -144,9 +151,7 @@
     color: #111;
   }
 
-  /* ----------------------------------
-     ハイライト（見どころ）
-  ---------------------------------- */
+  /* ハイライト（見どころ） */
   .highlights-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -184,15 +189,13 @@
     line-height: 1.25;
   }
 
-  .card-dx { background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/3/3d/Komatsu_PC200-8.jpg/800px-Komatsu_PC200-8.jpg"); }
+  .card-dx { background-image: url("https://www.kkr.mlit.go.jp/kingi/infradx-center/q291cd0000000bf7-img/kinki_DX.png"); }
   .card-castle { background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/6/68/Osaka_Castle_02bs3200.jpg/1200px-Osaka_Castle_02bs3200.jpg"); }
   .card-fushimi { background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/b/b5/Fushimi_Inari_Taisha_Senbon_Torii_2016.jpg/800px-Fushimi_Inari_Taisha_Senbon_Torii_2016.jpg"); }
 
   .day2 .section-tag { background: var(--primary-day2); }
 
-  /* ----------------------------------
-     タイムライン（スマホ最適化）
-  ---------------------------------- */
+  /* タイムライン */
   .timeline {
     position: relative;
     padding-left: 20px;
@@ -234,7 +237,7 @@
 
   .timeline-body {
     flex: 1;
-    min-width: 0; /* 折り返し崩れ防止 */
+    min-width: 0;
   }
   .timeline-time {
     font-weight: 800;
@@ -251,7 +254,6 @@
     line-height: 1.35;
   }
 
-  /* マップ文字リンク（押しやすい大きなタップ対象） */
   .map-link {
     display: inline-flex;
     align-items: center;
@@ -270,7 +272,6 @@
     line-height: 1.45;
   }
 
-  /* サムネイル＆公式HPボタン（タップ領域UP） */
   .timeline-photo-link {
     position: relative;
     display: block;
@@ -325,9 +326,6 @@
     font-size: 0.88rem;
   }
 
-  /* ----------------------------------
-     モバイル専用メディアクエリ
-  ---------------------------------- */
   @media (max-width: 480px) {
     .highlights-grid {
       grid-template-columns: repeat(3, 1fr);
@@ -349,7 +347,7 @@
 
 <body>
 
-<!-- クイックナビ（スクロールしても上部に固定） -->
+<!-- クイックナビ -->
 <nav class="sticky-nav">
   <a href="#day1" class="nav-item day1-btn">10/8 (木) Day 1</a>
   <a href="#day2" class="nav-item day2-btn">10/9 (金) Day 2</a>
@@ -382,19 +380,19 @@
     </p>
 
     <div class="highlights-grid">
-      <a href="https://maps.google.com/?q=近畿インフラDX推進センター" target="_blank" class="highlight-card card-dx">
+      <a href="https://maps.google.com/?q=近畿インフラDX推進センター" target="_blank" rel="noopener" class="highlight-card card-dx">
         <div class="highlight-content">
           <div class="highlight-title">🏗 インフラDX推進センター 📍</div>
         </div>
       </a>
-      <a href="https://maps.google.com/?q=大阪城天守閣" target="_blank" class="highlight-card card-castle">
+      <a href="https://maps.google.com/?q=大阪城天守閣" target="_blank" rel="noopener" class="highlight-card card-castle">
         <div class="highlight-content">
           <div class="highlight-title">🏯 大阪城 ＆ カップヌードル館 📍</div>
         </div>
       </a>
-      <a href="https://maps.google.com/?q=伏見稲荷大社" target="_blank" class="highlight-card card-fushimi">
+      <a href="https://maps.google.com/?q=伏見稲荷大社" target="_blank" rel="noopener" class="highlight-card card-fushimi">
         <div class="highlight-content">
-          <div class="highlight-title">⛩️ 伏見稲荷大社 参拝 📍</div>
+          <div class="highlight-title">⛩ 伏見稲荷大社 参拝 📍</div>
         </div>
       </a>
     </div>
@@ -431,7 +429,7 @@
         <div class="timeline-body">
           <div class="timeline-time">08:50 – 09:05</div>
           <div class="timeline-spot">
-            <a href="https://maps.google.com/?q=南条SA" target="_blank" class="map-link">
+            <a href="https://maps.google.com/?q=南条SA" target="_blank" rel="noopener" class="map-link">
               南条SA 休憩 📍
             </a>
           </div>
@@ -443,7 +441,7 @@
         <div class="timeline-body">
           <div class="timeline-time">10:05 – 10:20</div>
           <div class="timeline-spot">
-            <a href="https://maps.google.com/?q=多賀SA" target="_blank" class="map-link">
+            <a href="https://maps.google.com/?q=多賀SA" target="_blank" rel="noopener" class="map-link">
               多賀SA 休憩 📍
             </a>
           </div>
@@ -456,13 +454,13 @@
         <div class="timeline-body">
           <div class="timeline-time">12:00 – 13:15</div>
           <div class="timeline-spot">
-            <a href="https://maps.google.com/?q=千房+阪急服部店" target="_blank" class="map-link">
+            <a href="https://maps.google.com/?q=千房+阪急服部店" target="_blank" rel="noopener" class="map-link">
               昼食：千房 阪急服部店 📍
             </a>
           </div>
           <div class="timeline-desc">大阪到着！本場のお好み焼きランチを堪能。</div>
         </div>
-        <a href="https://shop.chibo.com/detail/38/" target="_blank" class="timeline-photo-link" title="千房 阪急服部店 公式HP">
+        <a href="https://shop.chibo.com/detail/38/" target="_blank" rel="noopener" class="timeline-photo-link" title="千房 阪急服部店 公式HP">
           <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/Okonomiyaki_001.jpg/800px-Okonomiyaki_001.jpg" alt="千房 お好み焼き" class="timeline-thumb">
           <span class="hp-badge">公式HP ↗</span>
         </a>
@@ -473,13 +471,13 @@
         <div class="timeline-body">
           <div class="timeline-time">13:45 – 15:15</div>
           <div class="timeline-spot">
-            <a href="https://maps.google.com/?q=カップヌードルミュージアム+大阪池田" target="_blank" class="map-link">
+            <a href="https://maps.google.com/?q=カップヌードルミュージアム+大阪池田" target="_blank" rel="noopener" class="map-link">
               カップヌードルミュージアム 📍
             </a>
           </div>
           <div class="timeline-desc">マイカップヌードル作り体験（14:30〜）！</div>
         </div>
-        <a href="https://www.cupnoodles-museum.jp/ja/osaka_ikeda/" target="_blank" class="timeline-photo-link" title="カップヌードルミュージアム 公式HP">
+        <a href="https://www.cupnoodles-museum.jp/ja/osaka_ikeda/" target="_blank" rel="noopener" class="timeline-photo-link" title="カップヌードルミュージアム 公式HP">
           <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a2/Cup_Noodle.JPG/800px-Cup_Noodle.JPG" alt="マイカップヌードル" class="timeline-thumb">
           <span class="hp-badge">公式HP ↗</span>
         </a>
@@ -490,13 +488,13 @@
         <div class="timeline-body">
           <div class="timeline-time">15:50 – 17:20</div>
           <div class="timeline-spot">
-            <a href="https://maps.google.com/?q=大阪城天守閣" target="_blank" class="map-link">
+            <a href="https://maps.google.com/?q=大阪城天守閣" target="_blank" rel="noopener" class="map-link">
               大阪城（天守閣見学） 📍
             </a>
           </div>
           <div class="timeline-desc">大阪のシンボル・天守閣に登って景色を鑑賞！</div>
         </div>
-        <a href="https://www.osakacastle.net/" target="_blank" class="timeline-photo-link" title="大阪城天守閣 公式HP">
+        <a href="https://www.osakacastle.net/" target="_blank" rel="noopener" class="timeline-photo-link" title="大阪城天守閣 公式HP">
           <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/68/Osaka_Castle_02bs3200.jpg/1200px-Osaka_Castle_02bs3200.jpg" alt="大阪城天守閣" class="timeline-thumb">
           <span class="hp-badge">公式HP ↗</span>
         </a>
@@ -507,13 +505,13 @@
         <div class="timeline-body">
           <div class="timeline-time">17:30頃</div>
           <div class="timeline-spot">
-            <a href="https://maps.google.com/?q=ハートンホテル西梅田" target="_blank" class="map-link">
+            <a href="https://maps.google.com/?q=ハートンホテル西梅田" target="_blank" rel="noopener" class="map-link">
               チェックイン：ハートンホテル西梅田 📍
             </a>
           </div>
           <div class="timeline-desc">ホテルに到着！部屋で荷物を置いて少し一休みの時間。</div>
         </div>
-        <a href="https://www.hearton.co.jp/hotel/nishi-umeda" target="_blank" class="timeline-photo-link" title="ハートンホテル西梅田 公式HP">
+        <a href="https://www.hearton.co.jp/hotel/nishi-umeda" target="_blank" rel="noopener" class="timeline-photo-link" title="ハートンホテル西梅田 公式HP">
           <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/Hotel_room_icon.svg/800px-Hotel_room_icon.svg.png" alt="ハートンホテル西梅田 外観" class="timeline-thumb" style="background:#fff;">
           <span class="hp-badge">公式HP ↗</span>
         </a>
@@ -524,13 +522,13 @@
         <div class="timeline-body">
           <div class="timeline-time">18:30 – 20:30</div>
           <div class="timeline-spot">
-            <a href="https://maps.google.com/?q=バルバッコア+梅田店" target="_blank" class="map-link">
+            <a href="https://maps.google.com/?q=バルバッコア+梅田店" target="_blank" rel="noopener" class="map-link">
               夕食：バルバッコア 梅田店 📍
             </a>
           </div>
           <div class="timeline-desc">ガッツリお肉を食べるシュラスコ懇親会！（※ホテルから徒歩約6分）</div>
         </div>
-        <a href="https://barbacoa.jp/umeda/" target="_blank" class="timeline-photo-link" title="バルバッコア 梅田店 公式HP">
+        <a href="https://barbacoa.jp/umeda/" target="_blank" rel="noopener" class="timeline-photo-link" title="バルバッコア 梅田店 公式HP">
           <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/Churrasco_1.jpg/800px-Churrasco_1.jpg" alt="バルバッコア シュラスコ" class="timeline-thumb">
           <span class="hp-badge">公式HP ↗</span>
         </a>
@@ -562,14 +560,14 @@
         <div class="timeline-body">
           <div class="timeline-time">10:00 – 12:00</div>
           <div class="timeline-spot">
-            <a href="https://maps.google.com/?q=近畿インフラDX推進センター" target="_blank" class="map-link">
+            <a href="https://maps.google.com/?q=近畿インフラDX推進センター" target="_blank" rel="noopener" class="map-link">
               近畿インフラDX推進センター 研修 📍
             </a>
           </div>
           <div class="timeline-desc">今回のメイン！枚方市にて最先端3D・ICT施工をしっかり勉強。</div>
         </div>
-        <a href="https://www.kkr.mlit.go.jp/kingi/infradx-center/index.html" target="_blank" class="timeline-photo-link" title="近畿インフラDX推進センター 公式案内">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3d/Komatsu_PC200-8.jpg/800px-Komatsu_PC200-8.jpg" alt="近畿インフラDX研修 ICT建機" class="timeline-thumb">
+        <a href="https://www.kkr.mlit.go.jp/kingi/infradx-center/index.html" target="_blank" rel="noopener" class="timeline-photo-link" title="近畿インフラDX推進センター 公式案内">
+          <img src="https://www.kkr.mlit.go.jp/kingi/infradx-center/q291cd0000000bf7-img/kinki_DX.png" alt="近畿インフラDX推進センター" class="timeline-thumb">
           <span class="hp-badge">公式HP ↗</span>
         </a>
       </div>
@@ -579,13 +577,13 @@
         <div class="timeline-body">
           <div class="timeline-time">12:30 – 13:30</div>
           <div class="timeline-spot">
-            <a href="https://maps.google.com/?q=京おばんざい+百足屋" target="_blank" class="map-link">
+            <a href="https://maps.google.com/?q=京おばんざい+百足屋" target="_blank" rel="noopener" class="map-link">
               昼食：京おばんざい 百足屋 📍
             </a>
           </div>
           <div class="timeline-desc">京都のおいしいおばんざいランチを堪能。</div>
         </div>
-        <a href="https://mukadeya.gorp.jp/" target="_blank" class="timeline-photo-link" title="京おばんざい 百足屋 公式HP">
+        <a href="https://mukadeya.gorp.jp/" target="_blank" rel="noopener" class="timeline-photo-link" title="京おばんざい 百足屋 公式HP">
           <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/Obanzai_Kyoto.jpg/800px-Obanzai_Kyoto.jpg" alt="京おばんざい" class="timeline-thumb">
           <span class="hp-badge">公式HP ↗</span>
         </a>
@@ -596,13 +594,13 @@
         <div class="timeline-body">
           <div class="timeline-time">13:45 – 14:45</div>
           <div class="timeline-spot">
-            <a href="https://maps.google.com/?q=伏見稲荷大社" target="_blank" class="map-link">
+            <a href="https://maps.google.com/?q=伏見稲荷大社" target="_blank" rel="noopener" class="map-link">
               伏見稲荷大社 観光・参拝 📍
             </a>
           </div>
           <div class="timeline-desc">朱色の千本鳥居を散策。お土産もここで！</div>
         </div>
-        <a href="https://inari.jp/" target="_blank" class="timeline-photo-link" title="伏見稲荷大社 公式HP">
+        <a href="https://inari.jp/" target="_blank" rel="noopener" class="timeline-photo-link" title="伏見稲荷大社 公式HP">
           <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b5/Fushimi_Inari_Taisha_Senbon_Torii_2016.jpg/800px-Fushimi_Inari_Taisha_Senbon_Torii_2016.jpg" alt="伏見稲荷大社 千本鳥居" class="timeline-thumb">
           <span class="hp-badge">公式HP ↗</span>
         </a>
@@ -613,7 +611,7 @@
         <div class="timeline-body">
           <div class="timeline-time">15:05 – 15:20</div>
           <div class="timeline-spot">
-            <a href="https://maps.google.com/?q=大津SA" target="_blank" class="map-link">
+            <a href="https://maps.google.com/?q=大津SA" target="_blank" rel="noopener" class="map-link">
               大津SA 休憩 📍
             </a>
           </div>
@@ -626,7 +624,7 @@
         <div class="timeline-body">
           <div class="timeline-time">17:00 – 17:15</div>
           <div class="timeline-spot">
-            <a href="https://maps.google.com/?q=南条SA" target="_blank" class="map-link">
+            <a href="https://maps.google.com/?q=南条SA" target="_blank" rel="noopener" class="map-link">
               南条SA 休憩 📍
             </a>
           </div>
@@ -638,7 +636,7 @@
         <div class="timeline-body">
           <div class="timeline-time">18:25 – 18:40</div>
           <div class="timeline-spot">
-            <a href="https://maps.google.com/?q=アプリコットパーク" target="_blank" class="map-link">
+            <a href="https://maps.google.com/?q=アプリコットパーク" target="_blank" rel="noopener" class="map-link">
               美川組降車：アプリコットパーク 📍
             </a>
           </div>
