@@ -1,506 +1,690 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>関西研修旅行 旅のしおり</title>
-  <style>
-    /* CSS変数設定 */
-    :root {
-      --primary: #1e3a8a;       /* メインカラー（ネイビー） */
-      --primary-light: #eff6ff; /* 薄いブルー */
-      --accent: #d97706;        /* アクセントカラー（オレンジ） */
-      --bg-main: #f8fafc;       /* 背景色 */
-      --card-bg: #ffffff;       /* カード背景 */
-      --text-main: #1e293b;     /* メイン文字色 */
-      --text-sub: #64748b;      /* サブ文字色 */
-      --border-color: #e2e8f0;  /* 枠線 */
-      --radius: 12px;           /* 角丸 */
-      --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-    }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>近畿インフラDX大阪研修旅行 旅のしおり｜白山野々市建設業協会青年委員会</title>
 
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
+<!-- SEO / OGP (LINE・チャット共有用) -->
+<meta name="description" content="2026年10月8日(木)〜9日(金) 開催。白山野々市建設業協会青年委員会の近畿インフラDX大阪研修旅行・旅のしおりです。">
+<meta property="og:type" content="website">
+<meta property="og:title" content="近畿インフラDX大阪研修旅行 旅のしおり">
+<meta property="og:description" content="1泊2日の行程、見どころ、アクセス、マップ情報一覧">
+<meta property="og:image" content="osakajo.png">
 
-    body {
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-      background-color: var(--bg-main);
-      color: var(--text-main);
-      line-height: 1.6;
-      padding-bottom: 40px;
-    }
+<!-- スマホ表示・テーマ設定 -->
+<meta name="theme-color" content="#ff6600">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 
-    /* ヘッダー */
-    header {
-      background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
-      color: white;
-      text-align: center;
-      padding: 30px 20px 20px;
-      box-shadow: var(--shadow);
-    }
+<!-- Google Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;600;700;900&display=swap" rel="stylesheet">
 
-    header h1 {
-      font-size: 1.5rem;
-      font-weight: bold;
-      margin-bottom: 5px;
-    }
+<style>
+  :root {
+    --primary-day1: #ff6600;
+    --primary-day1-light: #fff5ee;
+    --primary-day2: #0066cc;
+    --primary-day2-light: #f0f7ff;
+    --accent-yellow: #ffcc00;
+    --text-color: #2b2b2b;
+    --bg-color: #f4f6f8;
+    --card-shadow: 0 4px 16px rgba(0,0,0,0.06);
+  }
 
-    header p {
-      font-size: 0.9rem;
-      opacity: 0.9;
-    }
+  * {
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
+  }
 
-    /* メインコンテナ */
-    .container {
-      max-width: 600px;
-      margin: 0 auto;
-      padding: 15px;
-    }
+  body {
+    margin: 0;
+    font-family: 'Noto Sans JP', sans-serif;
+    background: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+    padding-bottom: 30px;
+  }
 
-    /* ナビゲーション（タブ） */
-    .nav-tabs {
-      display: flex;
-      background-color: #e2e8f0;
-      border-radius: var(--radius);
-      padding: 4px;
-      margin-bottom: 20px;
-    }
+  /* 固定ナビゲーション */
+  .sticky-nav {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(8px);
+    display: flex;
+    justify-content: space-around;
+    padding: 8px 12px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+    border-bottom: 1px solid #eee;
+  }
+  .nav-item {
+    text-decoration: none;
+    color: #555;
+    font-size: 0.8rem;
+    font-weight: 700;
+    padding: 6px 14px;
+    border-radius: 20px;
+    transition: all 0.2s;
+  }
+  .nav-item.day1-btn { background: var(--primary-day1-light); color: var(--primary-day1); }
+  .nav-item.day2-btn { background: var(--primary-day2-light); color: var(--primary-day2); }
 
-    .tab-btn {
-      flex: 1;
-      padding: 10px;
-      text-align: center;
-      border: none;
-      background: none;
-      font-weight: bold;
-      color: var(--text-sub);
-      cursor: pointer;
-      border-radius: calc(var(--radius) - 4px);
-      transition: all 0.2s ease;
-      font-size: 0.95rem;
-    }
+  /* 表紙（ヒーロー） */
+  .hero {
+    position: relative;
+    padding: 36px 16px 28px;
+    background: linear-gradient(135deg, rgba(0,0,0,0.75) 0%, rgba(0,0,0,0.45) 100%), url("osakajo.png") center/cover no-repeat #444;
+    color: white;
+    text-align: center;
+  }
+  .hero-badge {
+    display: inline-block;
+    background: var(--accent-yellow);
+    color: #222;
+    font-weight: 700;
+    font-size: 0.78rem;
+    padding: 4px 14px;
+    border-radius: 50px;
+    margin-bottom: 8px;
+  }
+  .hero-title {
+    font-size: 1.6rem;
+    font-weight: 900;
+    line-height: 1.35;
+    margin: 0 0 12px;
+    text-shadow: 0 2px 8px rgba(0,0,0,0.6);
+  }
+  .hero-meta {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    flex-wrap: wrap;
+  }
+  .hero-meta-item {
+    background: rgba(255, 255, 255, 0.25);
+    backdrop-filter: blur(6px);
+    padding: 5px 12px;
+    border-radius: 8px;
+    font-size: 0.82rem;
+    font-weight: 600;
+    border: 1px solid rgba(255,255,255,0.3);
+  }
 
-    .tab-btn.active {
-      background-color: white;
-      color: var(--primary);
-      box-shadow: 0 1px 3px rgba(0,0,0,0.1);
-    }
+  .container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 12px;
+  }
 
-    /* タブコンテンツ制御 */
-    .tab-content {
-      display: none;
-    }
+  .section {
+    background: white;
+    margin-top: 16px;
+    padding: 20px 16px;
+    border-radius: 16px;
+    box-shadow: var(--card-shadow);
+    scroll-margin-top: 50px;
+  }
+  .section-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border-bottom: 2px solid #f0f0f0;
+    padding-bottom: 10px;
+    margin-bottom: 16px;
+  }
+  .section-tag {
+    background: var(--primary-day1);
+    color: white;
+    font-weight: 800;
+    font-size: 0.8rem;
+    padding: 4px 10px;
+    border-radius: 6px;
+  }
+  .section-title {
+    font-size: 1.2rem;
+    font-weight: 800;
+    margin: 0;
+    color: #111;
+  }
 
-    .tab-content.active {
-      display: block;
-    }
+  /* ハイライト（見どころ） */
+  .highlights-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px;
+    margin-top: 12px;
+  }
+  .highlight-card {
+    position: relative;
+    height: 100px;
+    border-radius: 12px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 8px;
+    text-decoration: none;
+    color: white;
+    background-size: cover;
+    background-position: center;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+  }
+  .highlight-card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0.15) 70%);
+  }
+  .highlight-content {
+    position: relative;
+    z-index: 1;
+  }
+  .highlight-title {
+    font-weight: 700;
+    font-size: 0.78rem;
+    line-height: 1.25;
+  }
 
-    /* 日程カード・情報カード */
-    .section-title {
-      font-size: 1.2rem;
-      color: var(--primary);
-      margin-bottom: 15px;
-      padding-bottom: 5px;
-      border-bottom: 2px solid var(--primary-light);
-      display: flex;
-      align-items: center;
-      gap: 8px;
-    }
+  /* 背景画像指定（ローカルファイルへの変更箇所） */
+  .card-dx { background-image: url("DX.png"); }
+  .card-castle { background-image: url("osakajo.png"); }
+  .card-fushimi { background-image: url("fusimiinari.jpg"); }
 
-    /* タイムラインスタイル */
-    .timeline {
-      position: relative;
-      padding-left: 20px;
-    }
+  .day2 .section-tag { background: var(--primary-day2); }
 
-    .timeline::before {
-      content: '';
-      position: absolute;
-      left: 7px;
-      top: 10px;
-      bottom: 10px;
-      width: 2px;
-      background-color: #cbd5e1;
-    }
+  /* タイムライン */
+  .timeline {
+    position: relative;
+    padding-left: 20px;
+  }
+  .timeline::before {
+    content: "";
+    position: absolute;
+    left: 6px;
+    top: 8px;
+    bottom: 8px;
+    width: 3px;
+    background: #e2e8f0;
+    border-radius: 2px;
+  }
+  .day1 .timeline::before { background: var(--primary-day1); }
+  .day2 .timeline::before { background: var(--primary-day2); }
 
-    .timeline-item {
-      position: relative;
-      margin-bottom: 20px;
-    }
+  .timeline-item {
+    position: relative;
+    margin-bottom: 22px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 12px;
+  }
+  .timeline-item:last-child { margin-bottom: 0; }
 
-    .timeline-dot {
-      position: absolute;
-      left: -20px;
-      top: 15px;
-      width: 16px;
-      height: 16px;
-      border-radius: 50%;
-      background-color: white;
-      border: 3px solid var(--primary);
-    }
+  .timeline-dot {
+    position: absolute;
+    left: -20px;
+    top: 6px;
+    width: 13px;
+    height: 13px;
+    border-radius: 50%;
+    background: white;
+    border: 3px solid var(--primary-day1);
+  }
+  .day2 .timeline-dot { border-color: var(--primary-day2); }
 
-    .timeline-card {
-      background-color: var(--card-bg);
-      border-radius: var(--radius);
-      padding: 15px;
-      box-shadow: var(--shadow);
-      border: 1px solid var(--border-color);
-    }
+  .timeline-body {
+    flex: 1;
+    min-width: 0;
+  }
+  .timeline-time {
+    font-weight: 800;
+    font-size: 0.9rem;
+    color: var(--primary-day1);
+    margin-bottom: 2px;
+  }
+  .day2 .timeline-time { color: var(--primary-day2); }
 
-    .time-badge {
-      display: inline-block;
-      background-color: var(--primary-light);
-      color: var(--primary);
-      font-weight: bold;
-      font-size: 0.85rem;
-      padding: 2px 8px;
-      border-radius: 6px;
-      margin-bottom: 8px;
-    }
+  .timeline-spot {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: #111;
+    line-height: 1.35;
+  }
 
-    .timeline-title {
-      font-size: 1.05rem;
-      font-weight: bold;
-      margin-bottom: 6px;
-    }
+  .map-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    color: #111;
+    text-decoration: none;
+    border-bottom: 2px solid var(--accent-yellow);
+    padding: 2px 0;
+  }
+  .map-link:active { opacity: 0.6; }
 
-    .timeline-desc {
-      font-size: 0.9rem;
-      color: var(--text-sub);
-    }
+  .timeline-desc {
+    font-size: 0.85rem;
+    color: #555;
+    margin-top: 4px;
+    line-height: 1.45;
+  }
 
-    /* 写真・画像エリア */
-    .timeline-photo-link {
-      display: block;
-      position: relative;
-      border-radius: 8px;
-      overflow: hidden;
-      margin-top: 10px;
-      border: 1px solid var(--border-color);
-    }
+  .timeline-photo-group {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    flex-shrink: 0;
+  }
 
-    .timeline-thumb {
-      width: 100%;
-      height: 150px;
-      object-fit: cover;
-      display: block;
-    }
+  .timeline-photo-link {
+    position: relative;
+    display: block;
+    width: 84px;
+    height: 68px;
+    border-radius: 10px;
+    overflow: hidden;
+    flex-shrink: 0;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    text-decoration: none;
+    background: #eee;
+  }
+  .timeline-thumb {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+  .hp-badge {
+    position: absolute;
+    bottom: 0;
+    inset-x: 0;
+    background: rgba(0, 0, 0, 0.75);
+    color: #fff;
+    font-size: 0.65rem;
+    font-weight: 700;
+    padding: 2px 0;
+    text-align: center;
+  }
 
-    .hp-badge {
-      position: absolute;
-      bottom: 8px;
-      right: 8px;
-      background-color: rgba(0, 0, 0, 0.7);
-      color: white;
-      font-size: 0.75rem;
-      padding: 3px 8px;
-      border-radius: 4px;
-    }
+  /* 注意事項 */
+  .info-card {
+    background: #fffbe6;
+    border: 1.5px dashed #ffe58f;
+    border-radius: 14px;
+    padding: 16px;
+  }
+  .info-card h3 {
+    margin-top: 0;
+    color: #873800;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+  .info-list {
+    margin: 0;
+    padding-left: 18px;
+  }
+  .info-list li {
+    margin-bottom: 8px;
+    color: #444;
+    font-size: 0.88rem;
+  }
 
-    /* 見どころカード */
-    .spot-card {
-      background-color: var(--card-bg);
-      border-radius: var(--radius);
-      overflow: hidden;
-      box-shadow: var(--shadow);
-      margin-bottom: 20px;
-      border: 1px solid var(--border-color);
+  @media (max-width: 480px) {
+    .highlights-grid {
+      grid-template-columns: repeat(3, 1fr);
+      gap: 6px;
     }
-
-    .spot-img {
-      width: 100%;
-      height: 180px;
-      background-size: cover;
-      background-position: center;
+    .highlight-card {
+      height: 90px;
+      padding: 6px;
     }
-
-    /* アップロード画像の見どころカード背景画像指定 */
-    .spot-dx { background-image: url("DX.png"); }
-    .spot-castle { background-image: url("osakajo.png"); }
-    .spot-fushimi { background-image: url("fusimiinari.jpg"); }
-
-    .spot-body {
-      padding: 15px;
+    .highlight-title {
+      font-size: 0.72rem;
     }
-
-    .spot-title {
-      font-size: 1.1rem;
-      font-weight: bold;
-      margin-bottom: 6px;
-      color: var(--primary);
+    .hero-title {
+      font-size: 1.4rem;
     }
-
-    .spot-desc {
-      font-size: 0.9rem;
-      color: var(--text-sub);
-    }
-
-    /* 宿泊情報カード */
-    .hotel-card {
-      background-color: #f1f5f9;
-      border-radius: var(--radius);
-      padding: 15px;
-      margin-top: 15px;
-      border: 1px dashed #cbd5e1;
-    }
-
-    .hotel-title {
-      font-weight: bold;
-      color: var(--text-main);
-      margin-bottom: 5px;
-    }
-
-    .hotel-desc {
-      font-size: 0.85rem;
-      color: var(--text-sub);
-    }
-
-    /* フッター */
-    footer {
-      text-align: center;
-      margin-top: 30px;
-      font-size: 0.8rem;
-      color: var(--text-sub);
-    }
-  </style>
+  }
+</style>
 </head>
+
 <body>
 
-  <!-- ヘッダー -->
-  <header>
-    <h1>関西研修旅行 旅のしおり</h1>
-    <p>2026年10月8日(木) 〜 10月9日(金)</p>
-  </header>
+<!-- クイックナビ -->
+<nav class="sticky-nav">
+  <a href="#day1" class="nav-item day1-btn">10/8 (木) Day 1</a>
+  <a href="#day2" class="nav-item day2-btn">10/9 (金) Day 2</a>
+  <a href="#notice" class="nav-item" style="background:#eee;">📌 お願い</a>
+</nav>
 
-  <div class="container">
-
-    <!-- タブ切り替えボタン -->
-    <div class="nav-tabs">
-      <button class="tab-btn active" onclick="showTab('day1')">1日目 (10/8)</button>
-      <button class="tab-btn" onclick="showTab('day2')">2日目 (10/9)</button>
-      <button class="tab-btn" onclick="showTab('about')">見どころ</button>
+<!-- HERO / 表紙 -->
+<section class="hero">
+  <div class="hero-container">
+    <span class="hero-badge">白山野々市建設業協会青年委員会</span>
+    <h1 class="hero-title">近畿インフラDX<br>大阪研修旅行 旅のしおり</h1>
+    
+    <div class="hero-meta">
+      <span class="hero-meta-item">📅 2026年10月8日(木)〜9日(金)</span>
+      <span class="hero-meta-item">🚌 貸切バス（1泊2日）</span>
     </div>
-
-    <!-- 1日目 タブ -->
-    <div id="day1" class="tab-content active">
-      <div class="section-title">📅 10月8日(木) スケジュール</div>
-
-      <div class="timeline">
-
-        <div class="timeline-item">
-          <div class="timeline-dot"></div>
-          <div class="timeline-card">
-            <span class="time-badge">08:00</span>
-            <div class="timeline-title">金沢駅 出発</div>
-            <div class="timeline-desc">特急・新幹線にて移動</div>
-          </div>
-        </div>
-
-        <div class="timeline-item">
-          <div class="timeline-dot"></div>
-          <div class="timeline-card">
-            <span class="time-badge">10:30 - 11:30</span>
-            <div class="timeline-title">近畿インフラDX推進センター 視察</div>
-            <div class="timeline-desc">最新技術やインフラDXの取組事例を視察</div>
-            <a href="https://www.kkr.mlit.go.jp/plan/infra_dx/" target="_blank" rel="noopener" class="timeline-photo-link" title="近畿インフラDX推進センター 公式HP">
-              <img src="DX.png" alt="近畿インフラDX推進センター" class="timeline-thumb">
-              <span class="hp-badge">公式HP ↗</span>
-            </a>
-          </div>
-        </div>
-
-        <div class="timeline-item">
-          <div class="timeline-dot"></div>
-          <div class="timeline-card">
-            <span class="time-badge">12:00 - 13:00</span>
-            <div class="timeline-title">昼食：千房 阪急服部店</div>
-            <div class="timeline-desc">本場大阪のお好み焼き</div>
-            <a href="https://shop.chibo.com/detail/38/" target="_blank" rel="noopener" class="timeline-photo-link" title="千房 阪急服部店 公式HP">
-              <img src="chibo.jpg" alt="千房のお好み焼き" class="timeline-thumb">
-              <span class="hp-badge">公式HP ↗</span>
-            </a>
-          </div>
-        </div>
-
-        <div class="timeline-item">
-          <div class="timeline-dot"></div>
-          <div class="timeline-card">
-            <span class="time-badge">14:00 - 16:00</span>
-            <div class="timeline-title">カップヌードルミュージアム 大阪池田</div>
-            <div class="timeline-desc">マイカップヌードル作り体験＆館内見学</div>
-            <a href="https://www.cupnoodles-museum.jp/ja/osaka_ikeda/" target="_blank" rel="noopener" class="timeline-photo-link" title="カップヌードルミュージアム 公式HP">
-              <img src="cupnoodles.jpg" alt="カップヌードルミュージアム" class="timeline-thumb">
-              <span class="hp-badge">公式HP ↗</span>
-            </a>
-            <a href="https://www.cupnoodles-museum.jp/ja/osaka_ikeda/" target="_blank" rel="noopener" class="timeline-photo-link" title="安藤百福記念館" style="margin-top: 8px;">
-              <img src="momofuku.png" alt="創業者 安藤百福氏" class="timeline-thumb">
-              <span class="hp-badge">公式HP ↗</span>
-            </a>
-          </div>
-        </div>
-
-        <div class="timeline-item">
-          <div class="timeline-dot"></div>
-          <div class="timeline-card">
-            <span class="time-badge">18:00 - 20:00</span>
-            <div class="timeline-title">夕食：バルバッコア 梅田店</div>
-            <div class="timeline-desc">本格シュラスコ（ブラジル料理）で懇親会</div>
-            <a href="https://barbacoa.jp/pages/umeda" target="_blank" rel="noopener" class="timeline-photo-link" title="バルバッコア 梅田店 公式HP">
-              <img src="barbacoa.jpg" alt="バルバッコア" class="timeline-thumb">
-              <span class="hp-badge">公式HP ↗</span>
-            </a>
-          </div>
-        </div>
-
-        <div class="timeline-item">
-          <div class="timeline-dot"></div>
-          <div class="timeline-card">
-            <span class="time-badge">20:30</span>
-            <div class="timeline-title">ホテルチェックイン</div>
-            <div class="timeline-desc">ハートンホテル西梅田に宿泊</div>
-            <a href="https://www.hearton.co.jp/hotel/nishiumeda" target="_blank" rel="noopener" class="timeline-photo-link" title="ハートンホテル西梅田 公式HP">
-              <img src="hotel.png" alt="ハートンホテル西梅田" class="timeline-thumb">
-              <span class="hp-badge">公式HP ↗</span>
-            </a>
-          </div>
-        </div>
-
-      </div>
-
-      <div class="hotel-card">
-        <div class="hotel-title">🏨 宿泊先：ハートンホテル西梅田</div>
-        <div class="hotel-desc">〒530-0001 大阪府大阪市北区梅田3-3-55<br>TEL: 06-6342-1111</div>
-      </div>
-    </div>
-
-    <!-- 2日目 タブ -->
-    <div id="day2" class="tab-content">
-      <div class="section-title">📅 10月9日(金) スケジュール</div>
-
-      <div class="timeline">
-
-        <div class="timeline-item">
-          <div class="timeline-dot"></div>
-          <div class="timeline-card">
-            <span class="time-badge">08:30</span>
-            <div class="timeline-title">ホテル出発</div>
-            <div class="timeline-desc">バスにて移動</div>
-          </div>
-        </div>
-
-        <div class="timeline-item">
-          <div class="timeline-dot"></div>
-          <div class="timeline-card">
-            <span class="time-badge">09:00 - 11:00</span>
-            <div class="timeline-title">大阪城公園 散策</div>
-            <div class="timeline-desc">天守閣見学と公園内の歴史散策</div>
-            <a href="https://www.osakacastle.net/" target="_blank" rel="noopener" class="timeline-photo-link" title="大阪城公園 公式HP">
-              <img src="osakajo.png" alt="大阪城" class="timeline-thumb">
-              <span class="hp-badge">公式HP ↗</span>
-            </a>
-          </div>
-        </div>
-
-        <div class="timeline-item">
-          <div class="timeline-dot"></div>
-          <div class="timeline-card">
-            <span class="time-badge">12:30 - 13:30</span>
-            <div class="timeline-title">昼食：百足屋（京都）</div>
-            <div class="timeline-desc">京町家で楽しむ和食ランチ</div>
-            <a href="https://www.shin-mukadeya.com/" target="_blank" rel="noopener" class="timeline-photo-link" title="百足屋 公式HP">
-              <img src="mukadeya.png" alt="百足屋" class="timeline-thumb">
-              <span class="hp-badge">公式HP ↗</span>
-            </a>
-          </div>
-        </div>
-
-        <div class="timeline-item">
-          <div class="timeline-dot"></div>
-          <div class="timeline-card">
-            <span class="time-badge">14:00 - 16:00</span>
-            <div class="timeline-title">伏見稲荷大社 参拝</div>
-            <div class="timeline-desc">千本鳥居の参拝と自由散策</div>
-            <a href="http://inari.jp/" target="_blank" rel="noopener" class="timeline-photo-link" title="伏見稲荷大社 公式HP">
-              <img src="fusimiinari.jpg" alt="伏見稲荷大社" class="timeline-thumb">
-              <span class="hp-badge">公式HP ↗</span>
-            </a>
-          </div>
-        </div>
-
-        <div class="timeline-item">
-          <div class="timeline-dot"></div>
-          <div class="timeline-card">
-            <span class="time-badge">17:00</span>
-            <div class="timeline-title">京都駅 到着・帰路へ</div>
-            <div class="timeline-desc">特急・新幹線にて金沢へ</div>
-          </div>
-        </div>
-
-        <div class="timeline-item">
-          <div class="timeline-dot"></div>
-          <div class="timeline-card">
-            <span class="time-badge">19:30</span>
-            <div class="timeline-title">金沢駅 到着・解散</div>
-            <div class="timeline-desc">お疲れ様でした！</div>
-          </div>
-        </div>
-
-      </div>
-    </div>
-
-    <!-- 見どころ タブ -->
-    <div id="about" class="tab-content">
-      <div class="section-title">✨ 主な視察・観光スポット</div>
-
-      <div class="spot-card">
-        <div class="spot-img spot-dx"></div>
-        <div class="spot-body">
-          <div class="spot-title">近畿インフラDX推進センター</div>
-          <div class="spot-desc">建設産業の生産性向上やi-Constructionの体験研修施設。最新のDX技術を体感できます。</div>
-        </div>
-      </div>
-
-      <div class="spot-card">
-        <div class="spot-img spot-castle"></div>
-        <div class="spot-body">
-          <div class="spot-title">大阪城公園</div>
-          <div class="spot-desc">豊臣秀吉ゆかりの名城。天守閣からの眺望や巨大な石垣などが見どころです。</div>
-        </div>
-      </div>
-
-      <div class="spot-card">
-        <div class="spot-img spot-fushimi"></div>
-        <div class="spot-body">
-          <div class="spot-title">伏見稲荷大社</div>
-          <div class="spot-desc">全国に祀られる稲荷神社の総本宮。幾重にも連なる朱色の「千本鳥居」は必見です。</div>
-        </div>
-      </div>
-
-    </div>
-
   </div>
+</section>
 
-  <footer>
-    &copy; 関西研修旅行 実行委員会
-  </footer>
+<div class="container">
 
-  <script>
-    function showTab(tabName) {
-      // 全てのタブコンテンツを非表示
-      const tabs = document.querySelectorAll('.tab-content');
-      tabs.forEach(tab => tab.classList.remove('active'));
+  <!-- PURPOSE / 見どころ -->
+  <section class="section">
+    <div class="section-header">
+      <span class="section-tag">ABOUT</span>
+      <h2 class="section-title">旅の目的 ＆ ハイライト</h2>
+    </div>
+    <p style="margin:0 0 12px; font-size: 0.88rem; color:#444;">
+      近畿圏で進む「インフラDX」の現場をみんなで学んできます！学びはもちろん、大阪・京都のグルメや観光も楽しんで親睦を深めましょう！
+    </p>
 
-      // 全てのボタンからactiveクラスを削除
-      const buttons = document.querySelectorAll('.tab-btn');
-      buttons.forEach(btn => btn.classList.remove('active'));
+    <div class="highlights-grid">
+      <a href="https://maps.google.com/?q=近畿インフラDX推進センター" target="_blank" rel="noopener" class="highlight-card card-dx">
+        <div class="highlight-content">
+          <div class="highlight-title">🏗 インフラDX推進センター 📍</div>
+        </div>
+      </a>
+      <a href="https://maps.google.com/?q=大阪城天守閣" target="_blank" rel="noopener" class="highlight-card card-castle">
+        <div class="highlight-content">
+          <div class="highlight-title">🏯 大阪城 ＆ カップヌードル館 📍</div>
+        </div>
+      </a>
+      <a href="https://maps.google.com/?q=伏見稲荷大社" target="_blank" rel="noopener" class="highlight-card card-fushimi">
+        <div class="highlight-content">
+          <div class="highlight-title">⛩ 伏見稲荷大社 参拝 📍</div>
+        </div>
+      </a>
+    </div>
+  </section>
 
-      // 該当するタブとボタンを有効化
-      document.getElementById(tabName).classList.add('active');
-      event.currentTarget.classList.add('active');
-    }
-  </script>
+  <!-- DAY 1 -->
+  <section class="section day1" id="day1">
+    <div class="section-header">
+      <span class="section-tag">DAY 1</span>
+      <h2 class="section-title">10月8日（木）大阪観光＆懇親会</h2>
+    </div>
+
+    <div class="timeline">
+
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-body">
+          <div class="timeline-time">07:00</div>
+          <div class="timeline-spot">協会事務所前 集合・出発</div>
+          <div class="timeline-desc">朝早いですが遅刻厳禁でお願いします！</div>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-body">
+          <div class="timeline-time">07:35 – 07:45</div>
+          <div class="timeline-spot">美川乗車組 集合・ピックアップ</div>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-body">
+          <div class="timeline-time">08:50 – 09:05</div>
+          <div class="timeline-spot">
+            <a href="https://maps.google.com/?q=南条SA" target="_blank" rel="noopener" class="map-link">
+              南条SA 休憩 📍
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-body">
+          <div class="timeline-time">10:05 – 10:20</div>
+          <div class="timeline-spot">
+            <a href="https://maps.google.com/?q=多賀SA" target="_blank" rel="noopener" class="map-link">
+              多賀SA 休憩 📍
+            </a>
+          </div>
+          <div class="timeline-desc">ちょっと一息。水分補給＆お手洗いタイム。</div>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-body">
+          <div class="timeline-time">12:00 – 13:15</div>
+          <div class="timeline-spot">
+            <a href="https://maps.google.com/?q=千房+阪急服部店" target="_blank" rel="noopener" class="map-link">
+              昼食：千房 阪急服部店 📍
+            </a>
+          </div>
+          <div class="timeline-desc">大阪到着！本場のお好み焼きランチを堪能。</div>
+        </div>
+        <a href="https://shop.chibo.com/detail/38/" target="_blank" rel="noopener" class="timeline-photo-link" title="千房 阪急服部店 公式HP">
+          <img src="chibo.jpg" alt="お好み焼き" class="timeline-thumb">
+          <span class="hp-badge">公式HP ↗</span>
+        </a>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-body">
+          <div class="timeline-time">13:45 – 15:15</div>
+          <div class="timeline-spot">
+            <a href="https://maps.google.com/?q=カップヌードルミュージアム+大阪池田" target="_blank" rel="noopener" class="map-link">
+              カップヌードルミュージアム 📍
+            </a>
+          </div>
+          <div class="timeline-desc">マイカップヌードル作り体験（14:30〜）！</div>
+        </div>
+        <div class="timeline-photo-group">
+          <a href="https://www.cupnoodles-museum.jp/ja/osaka_ikeda/" target="_blank" rel="noopener" class="timeline-photo-link" title="カップヌードルミュージアム 公式HP">
+            <img src="cupnoodles.jpg" alt="カップヌードルミュージアム" class="timeline-thumb">
+            <span class="hp-badge">公式HP ↗</span>
+          </a>
+          <a href="https://www.cupnoodles-museum.jp/ja/osaka_ikeda/" target="_blank" rel="noopener" class="timeline-photo-link" title="安藤百福記念館">
+            <img src="momofuku.png" alt="創業者 安藤百福" class="timeline-thumb">
+            <span class="hp-badge">公式HP ↗</span>
+          </a>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-body">
+          <div class="timeline-time">15:50 – 17:20</div>
+          <div class="timeline-spot">
+            <a href="https://maps.google.com/?q=大阪城天守閣" target="_blank" rel="noopener" class="map-link">
+              大阪城（天守閣見学） 📍
+            </a>
+          </div>
+          <div class="timeline-desc">大阪のシンボル・天守閣に登って景色を鑑賞！</div>
+        </div>
+        <a href="https://www.osakacastle.net/" target="_blank" rel="noopener" class="timeline-photo-link" title="大阪城天守閣 公式HP">
+          <img src="osakajo.png" alt="大阪城天守閣" class="timeline-thumb">
+          <span class="hp-badge">公式HP ↗</span>
+        </a>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-body">
+          <div class="timeline-time">17:30頃</div>
+          <div class="timeline-spot">
+            <a href="https://maps.google.com/?q=ハートンホテル西梅田" target="_blank" rel="noopener" class="map-link">
+              チェックイン：ハートンホテル西梅田 📍
+            </a>
+          </div>
+          <div class="timeline-desc">ホテルに到着！部屋で荷物を置いて少し一休みの時間。</div>
+        </div>
+        <a href="https://www.hearton.co.jp/hotel/nishiumeda" target="_blank" rel="noopener" class="timeline-photo-link" title="ハートンホテル西梅田 公式HP">
+          <img src="hotel.png" alt="ハートンホテル西梅田" class="timeline-thumb">
+          <span class="hp-badge">公式HP ↗</span>
+        </a>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-body">
+          <div class="timeline-time">18:30 – 20:30</div>
+          <div class="timeline-spot">
+            <a href="https://maps.google.com/?q=バルバッコア+梅田店" target="_blank" rel="noopener" class="map-link">
+              夕食：バルバッコア 梅田店 📍
+            </a>
+          </div>
+          <div class="timeline-desc">ガッツリお肉を食べるシュラスコ懇親会！（※ホテルから徒歩約6分）</div>
+        </div>
+        <a href="https://barbacoa.jp/pages/umeda" target="_blank" rel="noopener" class="timeline-photo-link" title="バルバッコア 梅田店 公式HP">
+          <img src="barbacoa.jpg" alt="シュラスコ・肉料理" class="timeline-thumb">
+          <span class="hp-badge">公式HP ↗</span>
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- DAY 2 -->
+  <section class="section day2" id="day2">
+    <div class="section-header">
+      <span class="section-tag">DAY 2</span>
+      <h2 class="section-title">10月9日（金）DX研修・京都＆帰路</h2>
+    </div>
+
+    <div class="timeline">
+
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-body">
+          <div class="timeline-time">09:00</div>
+          <div class="timeline-spot">ホテル出発</div>
+          <div class="timeline-desc">朝食＆チェックアウトを済ませて集合！</div>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-body">
+          <div class="timeline-time">10:00 – 12:00</div>
+          <div class="timeline-spot">
+            <a href="https://maps.google.com/?q=近畿インフラDX推進センター" target="_blank" rel="noopener" class="map-link">
+              近畿インフラDX推進センター 研修 📍
+            </a>
+          </div>
+          <div class="timeline-desc">今回のメイン！枚方市にて最先端3D・ICT施工をしっかり勉強。</div>
+        </div>
+        <a href="https://www.kkr.mlit.go.jp/plan/infra_dx/" target="_blank" rel="noopener" class="timeline-photo-link" title="近畿インフラDX推進センター 公式案内">
+          <img src="DX.png" alt="近畿インフラDX推進センター" class="timeline-thumb">
+          <span class="hp-badge">公式HP ↗</span>
+        </a>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-body">
+          <div class="timeline-time">12:30 – 13:30</div>
+          <div class="timeline-spot">
+            <a href="https://maps.google.com/?q=京おばんざい+百足屋" target="_blank" rel="noopener" class="map-link">
+              昼食：京おばんざい 百足屋 📍
+            </a>
+          </div>
+          <div class="timeline-desc">京都のおいしいおばんざいランチを堪能。</div>
+        </div>
+        <a href="https://www.shin-mukadeya.com/" target="_blank" rel="noopener" class="timeline-photo-link" title="京おばんざい 百足屋 公式HP">
+          <img src="mukadeya.png" alt="和食・おばんざい" class="timeline-thumb">
+          <span class="hp-badge">公式HP ↗</span>
+        </a>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-body">
+          <div class="timeline-time">13:45 – 14:45</div>
+          <div class="timeline-spot">
+            <a href="https://maps.google.com/?q=伏見稲荷大社" target="_blank" rel="noopener" class="map-link">
+              伏見稲荷大社 観光・参拝 📍
+            </a>
+          </div>
+          <div class="timeline-desc">朱色の千本鳥居を散策。お土産もここで！</div>
+        </div>
+        <a href="http://inari.jp/" target="_blank" rel="noopener" class="timeline-photo-link" title="伏見稲荷大社 公式HP">
+          <img src="fusimiinari.jpg" alt="伏見稲荷大社 千本鳥居" class="timeline-thumb">
+          <span class="hp-badge">公式HP ↗</span>
+        </a>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-body">
+          <div class="timeline-time">15:05 – 15:20</div>
+          <div class="timeline-spot">
+            <a href="https://maps.google.com/?q=大津SA" target="_blank" rel="noopener" class="map-link">
+              大津SA 休憩 📍
+            </a>
+          </div>
+          <div class="timeline-desc">琵琶湖の景色を見ながら休憩タイム。</div>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-body">
+          <div class="timeline-time">17:00 – 17:15</div>
+          <div class="timeline-spot">
+            <a href="https://maps.google.com/?q=南条SA" target="_blank" rel="noopener" class="map-link">
+              南条SA 休憩 📍
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-body">
+          <div class="timeline-time">18:25 – 18:40</div>
+          <div class="timeline-spot">
+            <a href="https://maps.google.com/?q=アプリコットパーク" target="_blank" rel="noopener" class="map-link">
+              美川組降車：アプリコットパーク 📍
+            </a>
+          </div>
+          <div class="timeline-desc">美川組のみなさんお疲れ様でした！</div>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-body">
+          <div class="timeline-time">19:25</div>
+          <div class="timeline-spot">協会事務所前 到着・解散</div>
+          <div class="timeline-desc">無事到着！2日間お疲れ様でした！</div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- NOTICE / 注意事項 -->
+  <section class="section" id="notice" style="padding:0; background:transparent; box-shadow:none;">
+    <div class="info-card">
+      <h3>📌 皆様へのお願い</h3>
+      <ul class="info-list">
+        <li><strong>バスの発車に遅れないよう時間厳守でお願いします。</strong></li>
+        <li><strong>バス内はシートベルト着用：</strong>移動中は安全第一で必ずシートベルトを着用してください。</li>
+        <li><strong>貴重品の管理：</strong>お財布やスマホなど大事な物は各自で管理をお願いします。</li>
+        <li><strong>スケジュールの変更あり：</strong>道路の混雑状況によって時間が多少前後する場合があります。</li>
+      </ul>
+    </div>
+  </section>
+
+</div>
+
 </body>
 </html>
